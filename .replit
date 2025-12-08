@@ -1,4 +1,4 @@
-modules = ["nodejs-20", "web", "python-3.11"]
+modules = ["nodejs-20", "web"]
 [agent]
 expertMode = true
 integrations = ["resend:1.0.0"]
@@ -37,6 +37,10 @@ externalPort = 3001
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[[ports]]
+localPort = 37033
+externalPort = 5000
 
 [[ports]]
 localPort = 37485
