@@ -127,7 +127,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     company: "SuperK53",
     role: "Founder & CEO",
-    timeframe: "2020 — Present",
+    timeframe: "2020 - Present",
     description:
       "South Africa's Department of Transport certified K53 learner's license assessment platform with real-time scoring and analytics.",
     highlights: [
@@ -146,7 +146,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     company: "Taxfy",
     role: "Founder & CEO",
-    timeframe: "2022 — Present",
+    timeframe: "2022 - Present",
     description:
       "SARS-compliant tax calculator for South Africans, offering IRP5 analysis, medical aid optimization, and refund insights.",
     highlights: [
@@ -165,7 +165,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     company: "BurbGigz IT Services",
     role: "Owner & Founder",
-    timeframe: "2010 — Present",
+    timeframe: "2010 - Present",
     description:
       "Professional remote-first IT support services providing diagnostics, optimization, networking, and hardware solutions across Johannesburg.",
     highlights: [
@@ -184,7 +184,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     company: "GAAP Point-of-Sale",
     role: "Help Desk Technician",
-    timeframe: "Jan 2016 — Present",
+    timeframe: "Jan 2016 - Present",
     description:
       "Providing remote IT support for point-of-sale systems, ensuring network reliability and uninterrupted retail operations across South Africa.",
     highlights: [
@@ -825,7 +825,7 @@ function HeroSection() {
             Creator of NeuroLint &amp; Developer Tools
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Building <span className="font-semibold text-primary">NeuroLint</span> — the CLI that automatically fixes 700+ React/Next.js code issues.
+            Building <span className="font-semibold text-primary">NeuroLint</span>, the CLI that automatically fixes 700+ React/Next.js code issues.
             Also founder of BurbGigz IT Services and other South African digital ventures.
           </p>
         </div>
@@ -898,7 +898,7 @@ function NeuroLintSection() {
       </div>
       <SectionHeading
         title="NeuroLint CLI"
-        description="The only tool that actually fixes your React/Next.js code. No AI, no rewrites — just deterministic AST transformations that work."
+        description="The only tool that actually fixes your React/Next.js code. No AI, no rewrites. Just deterministic AST transformations that work."
       />
       
       <div className="mx-auto mt-12 max-w-4xl">
@@ -997,29 +997,29 @@ function AboutSection() {
       <SectionHeading
         eyebrow="About"
         title="Self-taught builder. Relentless shipper."
-        description="I spot broken systems and build better ones. No fluff, no excuses — just code that works."
+        description="I spot broken systems and build better ones. No fluff, no excuses. Just code that works."
       />
       <div className="mt-12 space-y-6 text-lg leading-relaxed text-muted-foreground">
         <p>
           I'm a self-taught developer and one-man startup studio. I generate ideas fast, execute faster, and pivot when needed. 
-          Most people love dreaming — I love building. My flagship project, <span className="font-semibold text-primary">NeuroLint</span>, 
-          is a CLI that automatically fixes 700+ React/Next.js issues using deterministic AST transformations. No AI, no rewrites — just 
+          Most people love dreaming. I love building. My flagship project, <span className="font-semibold text-primary">NeuroLint</span>, 
+          is a CLI that automatically fixes 700+ React/Next.js issues using deterministic AST transformations. No AI, no rewrites. Just 
           reliable, rule-based fixes that actually work.
         </p>
         <p>
           I work as a helpdesk tech by day while building digital products that can earn globally. Every project I touch starts the same way: 
-          "This thing is slow, ugly, or stupid — I can build it better." And 9 times out of 10, I actually do. I've shipped 
+          "This thing is slow, ugly, or stupid. I can build it better." And 9 times out of 10, I actually do. I've shipped 
           NeuroLint (CLI + npm package), ChatLure (interactive storytelling), nexmoji (npm package), and multiple South African 
           digital ventures.
         </p>
         <p>
-          I'm deeply technical — I live inside codebases, APIs, and debugging sessions. I fix things other people are scared to touch. 
+          I'm deeply technical. I live inside codebases, APIs, and debugging sessions. I fix things other people are scared to touch. 
           I hold CompTIA A+ and Network+ certifications, and I've been doing IT support since 2010. But the real goal? 
           Building systems that run themselves. Products that work while I sleep. That's the exit plan.
         </p>
         <p>
           I hate normal. I hate predictable. I pick the weird path on purpose because I need to feel different. 
-          I work best in chaos — deadlines, late-night sparks, sudden pivots, 10 tabs open in my brain. That's where I thrive.
+          I work best in chaos. Deadlines, late-night sparks, sudden pivots, 10 tabs open in my brain. That's where I thrive.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-base font-medium text-muted-foreground">
           <MapPin className="h-5 w-5 text-primary" aria-hidden />
