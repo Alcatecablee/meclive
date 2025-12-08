@@ -3,14 +3,21 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://justc.live/</loc>
-    <lastmod>2025-10-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://justc.live/clive-profile.jpg</image:loc>
-      <image:title>Clive Makazhu - Entrepreneur &amp; Technology Leader</image:title>
-      <image:caption>Clive Makazhu, founder of BurbGigz IT Services, SuperK53, &amp; Taxfy</image:caption>
+      <image:title>Clive Makazhu - Creator of NeuroLint &amp; Developer Tools</image:title>
+      <image:caption>Clive Makazhu, creator of NeuroLint CLI - the tool that auto-fixes 700+ React/Next.js issues</image:caption>
     </image:image>
+  </url>
+  
+  <url>
+    <loc>https://justc.live/#neurolint</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   
   <url>

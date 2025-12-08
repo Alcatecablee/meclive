@@ -6,6 +6,19 @@ A production-ready full-stack React application template with integrated Express
 **Current State:** Fully configured and running on Replit with proper port binding and deployment settings.
 
 ## Recent Changes
+- **December 8, 2025:** Added NeuroLint as flagship project and fixed misleading content
+  - Created dedicated NeuroLint flagship section with YouTube demo video embed
+  - Added feature cards highlighting 700+ auto-fixes, deterministic AST transformations, React 19 support
+  - Added terminal code block with installation and usage commands
+  - Added links to neurolint.dev, GitHub repo, and npm package
+  - Updated hero section: "Creator of NeuroLint & Developer Tools" as main tagline
+  - Fixed misleading stats: removed false "50K+ Users" claim, now shows "700+ Code Fixes"
+  - Updated Taxfy badges from "50,000+ Users" to "Beta" (honest labeling)
+  - Updated SuperK53 badges from "Official Platform" to "Side Project"
+  - Renamed Experience section to "Other Work" for side projects
+  - Updated About section to focus on NeuroLint as main project
+  - Added NeuroLint FAQ entry
+
 - **October 11, 2025:** Enhanced blog with visual content and comprehensive debug logging
   - Fixed blog post images: replaced incorrect header images with appropriate stock photos
   - Added inline images throughout blog post content for better visual engagement and readability

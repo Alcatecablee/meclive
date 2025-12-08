@@ -996,29 +996,35 @@ function AboutSection() {
     >
       <SectionHeading
         eyebrow="About"
-        title="Building developer tools and digital solutions"
-        description="Creator of NeuroLint and technology entrepreneur building products that solve real problems for developers and South African businesses."
+        title="Self-taught builder. Relentless shipper."
+        description="I spot broken systems and build better ones. No fluff, no excuses — just code that works."
       />
       <div className="mt-12 space-y-6 text-lg leading-relaxed text-muted-foreground">
         <p>
-          I am a developer and technology entrepreneur focused on building tools that make developers' lives easier.
-          My flagship project, <span className="font-semibold text-primary">NeuroLint</span>, is a CLI tool that automatically fixes 700+ 
-          React and Next.js code issues using deterministic AST transformations — no AI, just reliable, rule-based fixes.
+          I'm a self-taught developer and one-man startup studio. I generate ideas fast, execute faster, and pivot when needed. 
+          Most people love dreaming — I love building. My flagship project, <span className="font-semibold text-primary">NeuroLint</span>, 
+          is a CLI that automatically fixes 700+ React/Next.js issues using deterministic AST transformations. No AI, no rewrites — just 
+          reliable, rule-based fixes that actually work.
         </p>
         <p>
-          Beyond developer tools, I've founded several South African digital ventures including BurbGigz IT Services (since 2010),
-          SuperK53 (a learner's license assessment platform), and Taxfy (a tax calculator). These are side projects
-          that I maintain while focusing primarily on NeuroLint development.
+          I work as a helpdesk tech by day while building digital products that can earn globally. Every project I touch starts the same way: 
+          "This thing is slow, ugly, or stupid — I can build it better." And 9 times out of 10, I actually do. I've shipped 
+          NeuroLint (CLI + npm package), ChatLure (interactive storytelling), nexmoji (npm package), and multiple South African 
+          digital ventures.
         </p>
         <p>
-          My expertise spans from building CLI tools and working with AST transformations to hands-on IT support
-          with CompTIA certifications. I combine deep technical knowledge with entrepreneurial drive to create
-          tools that developers actually want to use.
+          I'm deeply technical — I live inside codebases, APIs, and debugging sessions. I fix things other people are scared to touch. 
+          I hold CompTIA A+ and Network+ certifications, and I've been doing IT support since 2010. But the real goal? 
+          Building systems that run themselves. Products that work while I sleep. That's the exit plan.
+        </p>
+        <p>
+          I hate normal. I hate predictable. I pick the weird path on purpose because I need to feel different. 
+          I work best in chaos — deadlines, late-night sparks, sudden pivots, 10 tabs open in my brain. That's where I thrive.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-base font-medium text-muted-foreground">
           <MapPin className="h-5 w-5 text-primary" aria-hidden />
           <span>
-            Lombardy East, Johannesburg • Building developer tools for the global community
+            Johannesburg, South Africa • Building for the global developer community
           </span>
         </div>
       </div>
