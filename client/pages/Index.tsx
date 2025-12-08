@@ -6,9 +6,12 @@ import {
   BadgeCheck,
   Building2,
   CalendarDays,
+  CheckCircle2,
   ChevronDown,
   Clock,
+  Code2,
   ExternalLink,
+  Github,
   Headset,
   Layers,
   LineChart,
@@ -17,10 +20,14 @@ import {
   MessageCircle,
   Monitor,
   Network,
+  Package,
+  Play,
   ShieldCheck,
   Sparkles,
+  Terminal,
   Twitter,
   Users,
+  Zap,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -91,15 +98,15 @@ type FAQItem = {
 
 const stats: StatCard[] = [
   {
-    value: "50K+",
-    label: "Users Served",
-    description: "Individuals supported across digital platforms",
-    icon: Users,
+    value: "700+",
+    label: "Code Fixes",
+    description: "ESLint errors NeuroLint can automatically fix",
+    icon: Code2,
   },
   {
-    value: "3",
-    label: "Businesses Founded",
-    description: "South African ventures launched and led",
+    value: "4",
+    label: "Ventures Founded",
+    description: "South African digital products launched and led",
     icon: Building2,
   },
   {
@@ -122,10 +129,10 @@ const portfolioItems: PortfolioItem[] = [
     role: "Founder & CEO",
     timeframe: "2020 — Present",
     description:
-      "South Africa's official Department of Transport certified K53 learner's license assessment platform with real-time scoring and analytics.",
+      "South Africa's Department of Transport certified K53 learner's license assessment platform with real-time scoring and analytics.",
     highlights: [
-      "Department of Transport Certified",
-      "Digital Assessment Platform",
+      "DoT Certified",
+      "Digital Assessment",
       "Real-time Analytics",
       "DLTC Directory",
     ],
@@ -133,7 +140,7 @@ const portfolioItems: PortfolioItem[] = [
       href: "https://superk53.co.za",
       label: "superk53.co.za",
     },
-    badge: "Official Platform",
+    badge: "Side Project",
     location: "Johannesburg, South Africa",
   },
   {
@@ -141,18 +148,18 @@ const portfolioItems: PortfolioItem[] = [
     role: "Founder & CEO",
     timeframe: "2022 — Present",
     description:
-      "South Africa's trusted SARS-compliant tax calculator delivering instant IRP5 analysis, medical aid optimization, and secure refund insights.",
+      "SARS-compliant tax calculator for South Africans, offering IRP5 analysis, medical aid optimization, and refund insights.",
     highlights: [
-      "50,000+ Users",
       "SARS Compliant",
       "POPIA Compliant",
-      "30-Second Processing",
+      "Fast Processing",
+      "Local Data",
     ],
     link: {
       href: "https://taxfy.co.za",
       label: "taxfy.co.za",
     },
-    badge: "SARS Compliant",
+    badge: "Beta",
     location: "Nationwide, Remote",
   },
   {
@@ -256,16 +263,16 @@ const skillCategories: SkillCategory[] = [
 const platformSolutions: PlatformSolution[] = [
   {
     title: "SuperK53",
-    badge: "Official Platform",
+    badge: "Side Project",
     description:
-      "South Africa's official K53 learner's license assessment platform.",
+      "K53 learner's license assessment platform for South Africans.",
     details:
       "Department of Transport certified digital examinations with comprehensive preparation, real-time scoring, and verified DLTC directory access.",
     bullets: [
-      "Official DoT Certification",
-      "64-Question Official Assessments",
+      "DoT Certification",
+      "64-Question Assessments",
       "Performance Analytics",
-      "DLTC Testing Centre Directory",
+      "DLTC Directory",
     ],
     link: {
       href: "https://superk53.co.za",
@@ -274,14 +281,14 @@ const platformSolutions: PlatformSolution[] = [
   },
   {
     title: "Taxfy",
-    badge: "50,000+ Users",
+    badge: "Beta",
     description:
-      "SARS-compliant tax calculator trusted by South Africans nationwide.",
+      "SARS-compliant tax calculator for South Africans.",
     details:
-      "Instant IRP5 analysis and refund calculations with bank-level security, delivering optimised results in under 30 seconds.",
+      "IRP5 analysis and refund calculations with bank-level security, delivering optimised results quickly.",
     bullets: [
       "SARS & POPIA Compliant",
-      "30-Second Processing",
+      "Fast Processing",
       "Medical Aid Credit Optimisation",
       "Local Data Processing",
     ],
@@ -386,6 +393,11 @@ const contactChannels: ContactChannel[] = [
 
 const faqItems: FAQItem[] = [
   {
+    question: "What is NeuroLint and how does it work?",
+    answer:
+      "NeuroLint is a CLI tool that automatically fixes 700+ common React and Next.js code issues using deterministic AST (Abstract Syntax Tree) transformations. It's rule-based, not AI-powered, meaning same input always produces the same output. It handles hydration bugs, missing React keys, accessibility issues, and more.",
+  },
+  {
     question: "What IT support services do you offer?",
     answer:
       "BurbGigz IT Services provides comprehensive remote and on-site IT support including virus removal, network setup, hardware upgrades (SSD/RAM), Windows installation, and professional diagnostics. All services come with competitive pricing and a 30-day workmanship warranty.",
@@ -393,22 +405,17 @@ const faqItems: FAQItem[] = [
   {
     question: "How does SuperK53 help with learner's license preparation?",
     answer:
-      "SuperK53 is South Africa's official Department of Transport certified K53 assessment platform. It offers 64-question practice tests that mirror real exams, real-time scoring, performance analytics, and access to a verified DLTC testing centre directory.",
+      "SuperK53 is a Department of Transport certified K53 assessment platform. It offers 64-question practice tests that mirror real exams, real-time scoring, performance analytics, and access to a verified DLTC testing centre directory.",
   },
   {
     question: "Is Taxfy SARS compliant and secure?",
     answer:
-      "Yes, Taxfy is fully SARS and POPIA compliant. We process all calculations locally in South Africa with bank-level security. Over 50,000 South Africans trust Taxfy for instant IRP5 analysis and refund calculations, delivered in under 30 seconds.",
+      "Yes, Taxfy is fully SARS and POPIA compliant. We process all calculations locally in South Africa with bank-level security. Taxfy provides IRP5 analysis and refund calculations quickly and securely.",
   },
   {
     question: "What are your IT support rates?",
     answer:
       "Remote IT support starts from R150, virus/malware removal from R200, network setup from R150, Windows reload from R120, and on-site hardware service has a R400 callout fee. All prices include professional diagnostics and expert consultation.",
-  },
-  {
-    question: "Do you offer remote IT support?",
-    answer:
-      "Yes! BurbGigz specializes in remote-first IT support. I can diagnose and resolve most issues remotely, saving you time and money. Remote sessions start immediately with real-time support and professional-grade diagnostics tools.",
   },
   {
     question: "What certifications do you hold?",
@@ -771,6 +778,7 @@ export default function Index() {
   return (
     <div className="flex flex-col">
       <HeroSection />
+      <NeuroLintSection />
       <AboutSection />
       <ExperienceSection />
       <SkillsSection />
@@ -806,7 +814,7 @@ function HeroSection() {
             className="h-full w-full object-cover"
           />
           <span className="absolute -bottom-4 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xl">
-            <Monitor className="h-7 w-7" aria-hidden />
+            <Terminal className="h-7 w-7" aria-hidden />
           </span>
         </div>
         <div className="mt-10 max-w-4xl space-y-6">
@@ -814,28 +822,28 @@ function HeroSection() {
             Clive "Just_Clive" Makazhu
           </h1>
           <p className="text-xl font-medium text-muted-foreground sm:text-2xl">
-            Entrepreneur &amp; Technology Leader
+            Creator of NeuroLint &amp; Developer Tools
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Founder &amp; CEO of BurbGigz IT Services, SuperK53, and Taxfy —
-            building innovative digital solutions for South African businesses
-            and consumers.
+            Building <span className="font-semibold text-primary">NeuroLint</span> — the CLI that automatically fixes 700+ React/Next.js code issues.
+            Also founder of BurbGigz IT Services and other South African digital ventures.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="#contact"
-            title="Jump to the contact section"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/90 active:translate-y-0 sm:px-10"
+            href="#neurolint"
+            title="Learn about NeuroLint"
+            className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/90 active:translate-y-0 sm:px-10"
           >
-            Get In Touch
+            <Terminal className="h-4 w-4" />
+            See NeuroLint
           </a>
           <a
-            href="#experience"
-            title="View Clive's professional experience"
+            href="#contact"
+            title="Jump to the contact section"
             className="inline-flex min-h-[44px] items-center justify-center rounded-full border-2 border-input bg-background/70 px-8 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/5 hover:shadow-lg active:translate-y-0 sm:px-10"
           >
-            View Experience
+            Get In Touch
           </a>
         </div>
         <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
@@ -856,6 +864,130 @@ function HeroSection() {
   );
 }
 
+function NeuroLintSection() {
+  const features = [
+    {
+      icon: Zap,
+      title: "700+ Auto-Fixes",
+      description: "Automatically fixes ESLint errors, hydration bugs, missing keys, and accessibility issues",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Deterministic & Safe",
+      description: "Rule-based AST parsing, not AI. Same input = same output. 5-step validation with auto-revert",
+    },
+    {
+      icon: Code2,
+      title: "React 19 Ready",
+      description: "Handles forwardRef removal, string refs migration, ReactDOM.render to createRoot, and more",
+    },
+    {
+      icon: Terminal,
+      title: "Simple CLI",
+      description: "Just run 'neurolint fix .' and watch your codebase get cleaned up automatically",
+    },
+  ];
+
+  return (
+    <SectionWrapper id="neurolint" className="bg-gradient-to-b from-primary/5 to-background">
+      <div className="mb-8 flex justify-center">
+        <span className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-lg">
+          <Sparkles className="h-4 w-4" />
+          Flagship Project
+        </span>
+      </div>
+      <SectionHeading
+        title="NeuroLint CLI"
+        description="The only tool that actually fixes your React/Next.js code. No AI, no rewrites — just deterministic AST transformations that work."
+      />
+      
+      <div className="mx-auto mt-12 max-w-4xl">
+        <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-black shadow-2xl">
+          <iframe
+            src="https://www.youtube.com/embed/czWtqrwcpDE"
+            title="NeuroLint Demo Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="h-full w-full"
+          />
+        </div>
+      </div>
+
+      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {features.map((feature) => {
+          const Icon = feature.icon;
+          return (
+            <div
+              key={feature.title}
+              className="flex flex-col gap-4 rounded-2xl border border-border bg-card/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Icon className="h-6 w-6" />
+              </div>
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-muted-foreground">{feature.description}</p>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-border bg-zinc-900 p-6 shadow-xl">
+        <div className="flex items-center gap-2 text-xs text-zinc-500">
+          <span className="h-3 w-3 rounded-full bg-red-500" />
+          <span className="h-3 w-3 rounded-full bg-yellow-500" />
+          <span className="h-3 w-3 rounded-full bg-green-500" />
+          <span className="ml-2">Terminal</span>
+        </div>
+        <pre className="mt-4 overflow-x-auto text-sm text-zinc-100">
+          <code>{`# Install globally
+npm install -g @neurolint/cli
+
+# Analyze your project
+neurolint analyze . --verbose
+
+# Preview fixes (dry-run)
+neurolint fix . --all-layers --dry-run
+
+# Apply fixes with backup
+neurolint fix . --all-layers --backup`}</code>
+        </pre>
+      </div>
+
+      <div className="mt-12 flex flex-wrap justify-center gap-4">
+        <a
+          href="https://neurolint.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-primary/90 hover:shadow-xl"
+        >
+          <ExternalLink className="h-4 w-4" />
+          Visit neurolint.dev
+        </a>
+        <a
+          href="https://github.com/Alcatecablee/Neurolint-CLI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-input bg-background px-8 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg"
+        >
+          <Github className="h-4 w-4" />
+          View on GitHub
+        </a>
+        <a
+          href="https://www.npmjs.com/package/@neurolint/cli"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-input bg-background px-8 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg"
+        >
+          <Package className="h-4 w-4" />
+          npm Package
+        </a>
+      </div>
+    </SectionWrapper>
+  );
+}
+
 function AboutSection() {
   return (
     <SectionWrapper
@@ -864,37 +996,29 @@ function AboutSection() {
     >
       <SectionHeading
         eyebrow="About"
-        title="Building impactful technology for South Africa"
-        description="Technology entrepreneur creating digital products and services that empower South African citizens and businesses alike."
+        title="Building developer tools and digital solutions"
+        description="Creator of NeuroLint and technology entrepreneur building products that solve real problems for developers and South African businesses."
       />
       <div className="mt-12 space-y-6 text-lg leading-relaxed text-muted-foreground">
         <p>
-          I am a technology entrepreneur and the founder of three successful
-          South African digital businesses. My journey began with BurbGigz IT
-          Services in 2010, providing professional IT support across
-          Johannesburg, and has expanded to include innovative platforms serving
-          thousands of South Africans.
+          I am a developer and technology entrepreneur focused on building tools that make developers' lives easier.
+          My flagship project, <span className="font-semibold text-primary">NeuroLint</span>, is a CLI tool that automatically fixes 700+ 
+          React and Next.js code issues using deterministic AST transformations — no AI, just reliable, rule-based fixes.
         </p>
         <p>
-          As Founder &amp; CEO of SuperK53, I've created South Africa's official
-          learner's license assessment platform, helping citizens prepare for
-          their driving tests with Department of Transport certified content.
-          Through Taxfy, I've built a trusted SARS-compliant tax calculator that
-          has assisted over 50,000 South Africans in maximising their tax
-          refunds.
+          Beyond developer tools, I've founded several South African digital ventures including BurbGigz IT Services (since 2010),
+          SuperK53 (a learner's license assessment platform), and Taxfy (a tax calculator). These are side projects
+          that I maintain while focusing primarily on NeuroLint development.
         </p>
         <p>
-          My expertise spans from hands-on IT support and professional
-          certifications to building scalable digital platforms that solve real
-          problems for South African consumers and businesses. I combine
-          technical knowledge with entrepreneurial vision to create solutions
-          that make a meaningful impact.
+          My expertise spans from building CLI tools and working with AST transformations to hands-on IT support
+          with CompTIA certifications. I combine deep technical knowledge with entrepreneurial drive to create
+          tools that developers actually want to use.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-base font-medium text-muted-foreground">
           <MapPin className="h-5 w-5 text-primary" aria-hidden />
           <span>
-            Lombardy East, Johannesburg • Building digital solutions for South
-            Africa
+            Lombardy East, Johannesburg • Building developer tools for the global community
           </span>
         </div>
       </div>
@@ -932,9 +1056,9 @@ function ExperienceSection() {
   return (
     <SectionWrapper id="experience" className="bg-background">
       <SectionHeading
-        eyebrow="Experience"
-        title="Business Portfolio"
-        description="Leading digital ventures and enterprise IT support that empower South African citizens and organisations."
+        eyebrow="Other Work"
+        title="Side Projects & Experience"
+        description="Additional ventures and IT services I maintain alongside NeuroLint development."
       />
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
         {portfolioItems.map((item) => (
