@@ -10,8 +10,8 @@ const navItems = [
   { href: "/#about", label: "About", title: "Go to About section", section: "about" },
   {
     href: "/#experience",
-    label: "Experience",
-    title: "Explore business experience",
+    label: "Projects",
+    title: "View projects and work",
     section: "experience",
   },
   { href: "/blog", label: "Blog", title: "Read expert insights and articles", section: null },
@@ -247,7 +247,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                 href="/#experience"
                 className="inline-flex items-center gap-2 transition hover:text-primary"
               >
-                Experience
+                Projects
               </a>
             </div>
           </div>

@@ -53,24 +53,6 @@ type SkillCategory = {
   items: string[];
 };
 
-type PlatformSolution = {
-  title: string;
-  badge: string;
-  description: string;
-  details: string;
-  bullets: string[];
-  link: {
-    href: string;
-    label: string;
-  };
-};
-
-type Testimonial = {
-  quote: string;
-  name: string;
-  role: string;
-};
-
 type ContactChannel = {
   title: string;
   description: string;
@@ -242,97 +224,6 @@ const skillCategories: SkillCategory[] = [
       "Professional Helpdesk",
       "POS Systems Expert",
     ],
-  },
-];
-
-const platformSolutions: PlatformSolution[] = [
-  {
-    title: "QuickBridge",
-    badge: "Live",
-    description:
-      "Instant P2P file, clipboard & message transfer with no accounts.",
-    details:
-      "Pairs two devices via QR code or 6-digit PIN over a WebRTC data channel. Files, text, and clipboard stay entirely between the two browsers. No server ever sees your data.",
-    bullets: [
-      "WebRTC P2P Transfer",
-      "QR + PIN Pairing",
-      "Auto-clipboard Sync",
-      "PWA Installable",
-    ],
-    link: {
-      href: "https://quickbridge.app",
-      label: "Visit QuickBridge",
-    },
-  },
-  {
-    title: "CalmPC",
-    badge: "Live",
-    description:
-      "Browser-based PC health checker and step-by-step fix guide library.",
-    details:
-      "Runs a real device health scan using browser APIs, generates an animated score, and recommends from 73 guides across 15 categories. Everything runs locally. No uploads, no tracking.",
-    bullets: [
-      "73 Fix Guides",
-      "Live Health Score",
-      "Shareable Report",
-      "No Account Needed",
-    ],
-    link: {
-      href: "https://calmpc.com",
-      label: "Visit CalmPC",
-    },
-  },
-  {
-    title: "CalmClip",
-    badge: "Live",
-    description:
-      "Browser-based video editor: trim, caption, and enhance locally.",
-    details:
-      "FFmpeg WASM handles all processing in-browser. AI features include Whisper transcription, filler-word removal, word-by-word captions, and face blur. No file ever leaves your device.",
-    bullets: [
-      "FFmpeg WASM",
-      "Whisper Captions",
-      "Face Blur",
-      "Silence Cutter",
-    ],
-    link: {
-      href: "https://calmclip.video",
-      label: "Visit CalmClip",
-    },
-  },
-  {
-    title: "SuperK53",
-    badge: "Side Project",
-    description:
-      "K53 learner's license assessment platform for South Africans.",
-    details:
-      "Department of Transport certified digital examinations with comprehensive preparation, real-time scoring, and verified DLTC directory access.",
-    bullets: [
-      "DoT Certification",
-      "64-Question Assessments",
-      "Performance Analytics",
-      "DLTC Directory",
-    ],
-    link: {
-      href: "https://superk53.co.za",
-      label: "Visit SuperK53",
-    },
-  },
-];
-
-
-const testimonials: Testimonial[] = [
-  {
-    quote:
-      "SuperK53 helped me pass my learner's test on the first try. The practice questions mirrored the real exam perfectly!",
-    name: "T. Mthembu",
-    role: "SuperK53 Learner",
-  },
-  {
-    quote:
-      "The SuperK53 platform is incredibly detailed. I felt fully prepared walking into the DLTC. Passed with flying colours!",
-    name: "K. Dlamini",
-    role: "SuperK53 Learner",
   },
 ];
 
@@ -510,66 +401,6 @@ function SkillCard({ category }: { category: SkillCategory }) {
   );
 }
 
-function PlatformCard({ platform }: { platform: PlatformSolution }) {
-  return (
-    <div className="flex h-full flex-col rounded-2xl border border-border bg-card/80 p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl sm:p-8" tabIndex={0}>
-      <div className="flex flex-wrap items-center gap-3">
-        <HighlightBadge>{platform.badge}</HighlightBadge>
-        <h3 className="font-display text-2xl font-semibold text-foreground">
-          {platform.title}
-        </h3>
-      </div>
-      <p className="mt-4 text-base font-medium text-muted-foreground">
-        {platform.description}
-      </p>
-      <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-        {platform.details}
-      </p>
-      <div className="mt-6 flex flex-wrap gap-2">
-        {platform.bullets.map((bullet) => (
-          <span
-            key={bullet}
-            className="inline-flex items-center rounded-full bg-background px-3 py-1 text-sm text-muted-foreground"
-          >
-            {bullet}
-          </span>
-        ))}
-      </div>
-      <a
-        href={platform.link.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        title={`Visit ${platform.title} in a new tab`}
-        className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-      >
-        <ExternalLink className="h-4 w-4" aria-hidden />
-        {platform.link.label}
-      </a>
-    </div>
-  );
-}
-
-function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
-  return (
-    <blockquote className="flex h-full flex-col justify-between rounded-2xl border border-border bg-card/70 p-8 shadow-sm">
-      <p className="text-base leading-relaxed text-muted-foreground">
-        “{testimonial.quote}”
-      </p>
-      <div className="mt-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-          <Users className="h-5 w-5" aria-hidden />
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-foreground">
-            {testimonial.name}
-          </p>
-          <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-        </div>
-      </div>
-    </blockquote>
-  );
-}
-
 function ContactChannelCard({ channel }: { channel: ContactChannel }) {
   const Icon = channel.icon;
   return (
@@ -634,10 +465,7 @@ export default function Index() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleContactSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    console.log("🚀 [CONTACT FORM] Form submission started");
     event.preventDefault();
-    
-    console.log("📝 [CONTACT FORM] Setting status to loading");
     setContactStatus("loading");
     setErrorMessage("");
 
@@ -648,57 +476,27 @@ export default function Index() {
       message: formData.get("message") as string,
     };
 
-    console.log("📋 [CONTACT FORM] Form data collected - fields:", {
-      hasName: !!data.name,
-      hasEmail: !!data.email,
-      messageLength: data.message?.length || 0,
-    });
-
     try {
-      console.log("🌐 [CONTACT FORM] Sending POST request to /api/contact");
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
-      console.log("📡 [CONTACT FORM] Response received:", {
-        status: response.status,
-        statusText: response.statusText,
-        ok: response.ok,
-      });
-
       const result = await response.json();
-      console.log("📦 [CONTACT FORM] Response data:", {
-        success: result.success,
-        hasMessage: !!result.message,
-        hasError: !!result.error,
-      });
 
       if (result.success) {
-        console.log("✅ [CONTACT FORM] Success! Setting status to success");
         setContactStatus("success");
-        console.log("🔄 [CONTACT FORM] Resetting form");
         event.currentTarget.reset();
-        console.log("⏱️ [CONTACT FORM] Setting 5-second timeout to reset status");
-        setTimeout(() => {
-          console.log("🔄 [CONTACT FORM] Timeout complete - resetting status to idle");
-          setContactStatus("idle");
-        }, 5000);
+        setTimeout(() => setContactStatus("idle"), 5000);
       } else {
-        console.log("❌ [CONTACT FORM] Request failed - error type:", typeof result.error);
         setContactStatus("error");
         setErrorMessage(result.error || "Failed to send message");
       }
-    } catch (error) {
-      console.error("💥 [CONTACT FORM] Network error occurred:", error instanceof Error ? error.message : 'Unknown error');
+    } catch {
       setContactStatus("error");
       setErrorMessage("Network error. Please try again.");
     }
-    
-    console.log("🏁 [CONTACT FORM] Form submission process completed");
   };
 
   return (
@@ -707,8 +505,6 @@ export default function Index() {
       <AboutSection />
       <ExperienceSection />
       <SkillsSection />
-      <ServicesSection />
-      <TestimonialsSection />
       <BlogSection />
       <FAQSection />
       <ContactSection
@@ -723,14 +519,7 @@ export default function Index() {
 function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="absolute inset-0">
-        <img
-          src="https://macaly-fuagtp0bk4zo8xer5umsdn5d.macaly-app.com/network-bg.jpg"
-          alt="Network topology background"
-          className="h-full w-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/95" />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
       <div className="relative mx-auto flex min-h-[640px] w-full max-w-6xl flex-col items-center px-6 pb-24 pt-36 text-center">
         <div className="relative h-52 w-52 overflow-hidden rounded-full border-4 border-primary/20 bg-background shadow-[0_25px_60px_rgba(15,23,42,0.18)]">
           <img
@@ -887,43 +676,6 @@ function SkillsSection() {
       <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category) => (
           <SkillCard key={category.title} category={category} />
-        ))}
-      </div>
-    </SectionWrapper>
-  );
-}
-
-function ServicesSection() {
-  return (
-    <SectionWrapper className="bg-background">
-      <SectionHeading
-        eyebrow="Solutions"
-        title="Digital Platforms"
-        description="Practical digital products built for South African users."
-      />
-      <div className="mt-12 grid gap-8 lg:grid-cols-2">
-        {platformSolutions.map((platform) => (
-          <PlatformCard key={platform.title} platform={platform} />
-        ))}
-      </div>
-    </SectionWrapper>
-  );
-}
-
-function TestimonialsSection() {
-  return (
-    <SectionWrapper className="bg-gradient-to-b from-background/60 to-background">
-      <SectionHeading
-        eyebrow="Testimonials"
-        title="What Clients Say"
-        description="Real feedback from South Africans who've used my platforms."
-      />
-      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {testimonials.map((testimonial) => (
-          <TestimonialCard
-            key={`${testimonial.name}-${testimonial.role}`}
-            testimonial={testimonial}
-          />
         ))}
       </div>
     </SectionWrapper>
