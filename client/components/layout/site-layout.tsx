@@ -19,9 +19,10 @@ const navItems = [
 ];
 
 const footerLinks = [
+  { href: "https://quickbridge.app", label: "QuickBridge" },
+  { href: "https://calmpc.app", label: "CalmPC" },
+  { href: "https://calmclip.app", label: "CalmClip" },
   { href: "https://superk53.co.za", label: "SuperK53" },
-  { href: "https://taxfy.co.za", label: "Taxfy" },
-  { href: "https://burbgigz.com", label: "BurbGigz" },
 ];
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
@@ -185,7 +186,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                   Clive "Just_Clive" Makazhu
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Founder of SuperK53, Taxfy &amp; BurbGigz IT Services
+                  South African Developer &amp; Entrepreneur
                 </p>
               </div>
             </div>

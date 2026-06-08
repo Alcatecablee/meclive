@@ -58,7 +58,7 @@ export default function Blog() {
       <Helmet>
         <title>Blog & Insights - Just Clive | Technology, Entrepreneurship & Digital Innovation</title>
         <meta name="description" content="Expert perspectives on technology, entrepreneurship, and digital innovation in South Africa. Learn about K53 driving tests, SARS tax optimization, remote IT support, and more." />
-        <meta name="keywords" content="South Africa blog, technology insights, entrepreneurship tips, K53 learner's license, SARS tax refund, remote IT support, BurbGigz, SuperK53, Taxfy" />
+        <meta name="keywords" content="South Africa blog, technology insights, entrepreneurship tips, K53 learner's license, SARS tax refund, remote IT support, QuickBridge, CalmPC, CalmClip" />
         <link rel="canonical" href="https://justc.live/blog" />
         <meta property="og:title" content="Blog & Insights - Just Clive" />
         <meta property="og:description" content="Expert perspectives on technology, entrepreneurship, and digital innovation in South Africa" />

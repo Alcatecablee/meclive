@@ -811,7 +811,7 @@ function AboutSection() {
           <span className="font-semibold text-primary"> QuickBridge</span> (P2P file transfer via WebRTC), 
           <span className="font-semibold text-primary"> CalmPC</span> (browser-based PC health checker), and 
           <span className="font-semibold text-primary"> CalmClip</span> (local video editor powered by FFmpeg WASM). 
-          I've also built <span className="font-semibold text-primary">SuperK53</span>, a DoT-certified K53 platform for South Africa, plus developer tooling and npm packages.
+          I also maintain <span className="font-semibold text-primary">SuperK53</span>, a DoT-certified K53 learner's licence platform that's still live and used across South Africa.
         </p>
         <p>
           I'm deeply technical. I live inside codebases, APIs, and debugging sessions. I fix things other people are scared to touch. 
@@ -916,7 +916,7 @@ function TestimonialsSection() {
       <SectionHeading
         eyebrow="Testimonials"
         title="What Clients Say"
-        description="Real feedback from South Africans who've used SuperK53."
+        description="Real feedback from South Africans who've used my platforms."
       />
       <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((testimonial) => (
