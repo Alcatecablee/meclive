@@ -608,7 +608,7 @@ function AboutSection() {
           Building systems that run themselves. Products that work while I sleep. That's the exit plan.
         </p>
         <p>
-          I pick the weird path on purpose. Late nights, sudden pivots, hard problems nobody wants to touch — that's the work I actually enjoy. If you need something built that works and keeps working, reach out.
+          I pick the weird path on purpose. Late nights, sudden pivots, hard problems nobody wants to touch. That's the work I actually enjoy. If you need something built that works and keeps working, reach out.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-base font-medium text-muted-foreground">
           <MapPin className="h-5 w-5 text-primary" aria-hidden />
