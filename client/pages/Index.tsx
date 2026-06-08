@@ -6,22 +6,18 @@ import {
   BadgeCheck,
   Building2,
   CalendarDays,
-  CheckCircle2,
   ChevronDown,
   Clock,
   Code2,
   ExternalLink,
   Github,
-  Headset,
   Layers,
   LineChart,
   Loader2,
   MapPin,
   MessageCircle,
   Monitor,
-  Network,
   Package,
-  Play,
   ShieldCheck,
   Sparkles,
   Terminal,
@@ -72,13 +68,6 @@ type PlatformSolution = {
   };
 };
 
-type ServicePackage = {
-  title: string;
-  price: string;
-  description: string;
-  items: string[];
-};
-
 type Testimonial = {
   quote: string;
   name: string;
@@ -98,28 +87,28 @@ type FAQItem = {
 
 const stats: StatCard[] = [
   {
-    value: "700+",
-    label: "Code Fixes",
-    description: "ESLint errors NeuroLint can automatically fix",
-    icon: Code2,
-  },
-  {
-    value: "4",
-    label: "Ventures Founded",
-    description: "South African digital products launched and led",
-    icon: Building2,
-  },
-  {
     value: "15+",
     label: "Years Experience",
-    description: "Continuous technology and IT support expertise",
+    description: "Continuous technology and IT expertise since 2010",
     icon: Sparkles,
   },
   {
-    value: "24/7",
-    label: "Support Available",
-    description: "Professional assistance with rapid response times",
-    icon: Headset,
+    value: "2",
+    label: "Active Platforms",
+    description: "Live South African digital products built and shipped",
+    icon: Building2,
+  },
+  {
+    value: "100%",
+    label: "Self-Taught",
+    description: "No bootcamp, no CS degree — built everything from scratch",
+    icon: Code2,
+  },
+  {
+    value: "ZA",
+    label: "Based In",
+    description: "Building for South Africa and the global developer community",
+    icon: MapPin,
   },
 ];
 
@@ -141,44 +130,6 @@ const portfolioItems: PortfolioItem[] = [
       label: "superk53.co.za",
     },
     badge: "Side Project",
-    location: "Johannesburg, South Africa",
-  },
-  {
-    company: "Taxfy",
-    role: "Founder & CEO",
-    timeframe: "2022 - Present",
-    description:
-      "SARS-compliant tax calculator for South Africans, offering IRP5 analysis, medical aid optimization, and refund insights.",
-    highlights: [
-      "SARS Compliant",
-      "POPIA Compliant",
-      "Fast Processing",
-      "Local Data",
-    ],
-    link: {
-      href: "https://taxfy.co.za",
-      label: "taxfy.co.za",
-    },
-    badge: "Beta",
-    location: "Nationwide, Remote",
-  },
-  {
-    company: "BurbGigz IT Services",
-    role: "Owner & Founder",
-    timeframe: "2010 - Present",
-    description:
-      "Professional remote-first IT support services providing diagnostics, optimization, networking, and hardware solutions across Johannesburg.",
-    highlights: [
-      "Remote-First Support",
-      "CompTIA A+ Certified",
-      "Network+ Certified",
-      "30-Day Warranty",
-    ],
-    link: {
-      href: "https://burbgigz.com",
-      label: "burbgigz.com",
-    },
-    badge: "IT Support",
     location: "Johannesburg, South Africa",
   },
   {
@@ -229,26 +180,6 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Remote IT Support",
-    icon: Headset,
-    items: [
-      "Remote Diagnostics",
-      "Software Installation",
-      "System Updates",
-      "Real-time Support",
-    ],
-  },
-  {
-    title: "Network & Hardware",
-    icon: Network,
-    items: [
-      "Wi-Fi Configuration",
-      "Network Troubleshooting",
-      "SSD Installation",
-      "RAM Upgrades",
-    ],
-  },
-  {
     title: "Professional Certifications",
     icon: BadgeCheck,
     items: [
@@ -279,75 +210,8 @@ const platformSolutions: PlatformSolution[] = [
       label: "Visit SuperK53",
     },
   },
-  {
-    title: "Taxfy",
-    badge: "Beta",
-    description:
-      "SARS-compliant tax calculator for South Africans.",
-    details:
-      "IRP5 analysis and refund calculations with bank-level security, delivering optimised results quickly.",
-    bullets: [
-      "SARS & POPIA Compliant",
-      "Fast Processing",
-      "Medical Aid Credit Optimisation",
-      "Local Data Processing",
-    ],
-    link: {
-      href: "https://taxfy.co.za",
-      label: "Visit Taxfy",
-    },
-  },
 ];
 
-const servicePackages: ServicePackage[] = [
-  {
-    title: "Remote IT Support",
-    price: "From R150",
-    description:
-      "Professional remote diagnostics and resolution for urgent issues.",
-    items: ["Remote Diagnostics", "Software Installation", "System Updates"],
-  },
-  {
-    title: "Virus & Malware Removal",
-    price: "From R200",
-    description:
-      "Deep system scans and malware removal with secure antivirus setup.",
-    items: ["Deep System Scan", "Malware Removal", "Antivirus Setup"],
-  },
-  {
-    title: "Network & Connectivity",
-    price: "From R150",
-    description:
-      "Reliable connectivity for homes and SMEs with expert configuration.",
-    items: ["Wi-Fi Configuration", "Network Troubleshooting", "Printer Setup"],
-  },
-  {
-    title: "Windows Reload & Setup",
-    price: "From R120",
-    description:
-      "Clean OS installs, driver setup, and seamless data migration.",
-    items: ["Full OS Installation", "Driver Setup", "Data Migration"],
-  },
-  {
-    title: "On-Site Hardware Service",
-    price: "R400 callout",
-    description:
-      "Hardware upgrades and replacements with 30-day workmanship warranty.",
-    items: ["SSD Installation", "RAM Upgrades", "Component Replacement"],
-  },
-  {
-    title: "Professional Certifications",
-    price: "Credentialed",
-    description:
-      "Certified expertise recognised across enterprise IT environments.",
-    items: [
-      "CompTIA A+",
-      "CompTIA Network+",
-      "Professional Helpdesk",
-      "POS Systems Expert",
-    ],
-  },
-];
 
 const testimonials: Testimonial[] = [
   {
@@ -358,25 +222,13 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Taxfy identified an extra R3,200 refund I had missed. The medical aid calculations were incredibly precise and fast.",
-    name: "P. van der Merwe",
-    role: "Taxfy User",
-  },
-  {
-    quote:
-      "BurbGigz resolved my network outage in under 20 minutes. Professional service with honest pricing and follow-up support.",
-    name: "S. Naidoo",
-    role: "BurbGigz Client",
+      "The SuperK53 platform is incredibly detailed. I felt fully prepared walking into the DLTC. Passed with flying colours!",
+    name: "K. Dlamini",
+    role: "SuperK53 Learner",
   },
 ];
 
 const contactChannels: ContactChannel[] = [
-  {
-    title: "IT Support & Consulting",
-    description:
-      "Remote sessions start immediately with enterprise-grade diagnostics.",
-    icon: Headset,
-  },
   {
     title: "Digital Platform Development",
     description:
@@ -393,34 +245,24 @@ const contactChannels: ContactChannel[] = [
 
 const faqItems: FAQItem[] = [
   {
-    question: "What is NeuroLint and how does it work?",
-    answer:
-      "NeuroLint is a CLI tool that automatically fixes 700+ common React and Next.js code issues using deterministic AST (Abstract Syntax Tree) transformations. It's rule-based, not AI-powered, meaning same input always produces the same output. It handles hydration bugs, missing React keys, accessibility issues, and more.",
-  },
-  {
-    question: "What IT support services do you offer?",
-    answer:
-      "BurbGigz IT Services provides comprehensive remote and on-site IT support including virus removal, network setup, hardware upgrades (SSD/RAM), Windows installation, and professional diagnostics. All services come with competitive pricing and a 30-day workmanship warranty.",
-  },
-  {
     question: "How does SuperK53 help with learner's license preparation?",
     answer:
       "SuperK53 is a Department of Transport certified K53 assessment platform. It offers 64-question practice tests that mirror real exams, real-time scoring, performance analytics, and access to a verified DLTC testing centre directory.",
   },
   {
-    question: "Is Taxfy SARS compliant and secure?",
+    question: "What kind of digital work do you take on?",
     answer:
-      "Yes, Taxfy is fully SARS and POPIA compliant. We process all calculations locally in South Africa with bank-level security. Taxfy provides IRP5 analysis and refund calculations quickly and securely.",
-  },
-  {
-    question: "What are your IT support rates?",
-    answer:
-      "Remote IT support starts from R150, virus/malware removal from R200, network setup from R150, Windows reload from R120, and on-site hardware service has a R400 callout fee. All prices include professional diagnostics and expert consultation.",
+      "I build web platforms and digital products — primarily for South African markets. My focus is on practical, useful tools that solve real problems. If you have an idea and need someone to bring it to life technically, feel free to reach out.",
   },
   {
     question: "What certifications do you hold?",
     answer:
-      "I hold CompTIA A+ and CompTIA Network+ certifications, along with professional helpdesk credentials and POS systems expertise. With 15+ years of hands-on experience, I bring enterprise-level expertise to every project.",
+      "I hold CompTIA A+ and CompTIA Network+ certifications, along with professional helpdesk credentials and POS systems expertise. With 15+ years of hands-on experience, I bring enterprise-level technical knowledge to every project.",
+  },
+  {
+    question: "How can I get in touch?",
+    answer:
+      "You can use the contact form below, reach out via WhatsApp, or find me on X (Twitter) as @just_clive_sa. I typically respond within 24 hours.",
   },
 ];
 
@@ -595,30 +437,6 @@ function PlatformCard({ platform }: { platform: PlatformSolution }) {
         <ExternalLink className="h-4 w-4" aria-hidden />
         {platform.link.label}
       </a>
-    </div>
-  );
-}
-
-function ServiceCard({ service }: { service: ServicePackage }) {
-  return (
-    <div className="flex h-full flex-col rounded-2xl border border-border bg-card/70 p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 hover:shadow-lg sm:p-6" tabIndex={0}>
-      <div>
-        <h3 className="font-display text-xl font-semibold text-foreground">
-          {service.title}
-        </h3>
-        <p className="mt-1 text-sm font-medium text-primary">{service.price}</p>
-        <p className="mt-3 text-sm text-muted-foreground">
-          {service.description}
-        </p>
-      </div>
-      <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-        {service.items.map((item) => (
-          <li key={item} className="flex items-start gap-2">
-            <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-primary" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
@@ -822,21 +640,21 @@ function HeroSection() {
             Clive "Just_Clive" Makazhu
           </h1>
           <p className="text-xl font-medium text-muted-foreground sm:text-2xl">
-            Creator of NeuroLint &amp; Developer Tools
+            South African Developer &amp; Entrepreneur
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Building <span className="font-semibold text-primary">NeuroLint</span>, the CLI that automatically fixes 700+ React/Next.js code issues.
-            Also founder of BurbGigz IT Services and other South African digital ventures.
+            Self-taught builder focused on practical digital products for South Africa.
+            Founder of <span className="font-semibold text-primary">SuperK53</span> and other digital ventures.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="#neurolint"
-            title="Learn about NeuroLint"
+            href="#experience"
+            title="View my projects"
             className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/90 active:translate-y-0 sm:px-10"
           >
-            <Terminal className="h-4 w-4" />
-            See NeuroLint
+            <Code2 className="h-4 w-4" />
+            View My Work
           </a>
           <a
             href="#contact"
@@ -1001,25 +819,23 @@ function AboutSection() {
       />
       <div className="mt-12 space-y-6 text-lg leading-relaxed text-muted-foreground">
         <p>
-          I'm a self-taught developer and one-man startup studio. I generate ideas fast, execute faster, and pivot when needed. 
-          Most people love dreaming. I love building. My flagship project, <span className="font-semibold text-primary">NeuroLint</span>, 
-          is a CLI that automatically fixes 700+ React/Next.js issues using deterministic AST transformations. No AI, no rewrites. Just 
-          reliable, rule-based fixes that actually work.
+          I'm a self-taught developer and one-man startup studio based in Johannesburg. I generate ideas fast, execute faster, and pivot when needed. 
+          Most people love dreaming. I love building. Every project I touch starts the same way: 
+          "This thing is slow, ugly, or stupid. I can build it better." And 9 times out of 10, I actually do.
         </p>
         <p>
-          I work as a helpdesk tech by day while building digital products that can earn globally. Every project I touch starts the same way: 
-          "This thing is slow, ugly, or stupid. I can build it better." And 9 times out of 10, I actually do. I've shipped 
-          NeuroLint (CLI + npm package), ChatLure (interactive storytelling), nexmoji (npm package), and multiple South African 
-          digital ventures.
+          I work as a helpdesk tech by day while building digital products on the side. I've shipped multiple South African digital ventures — 
+          most notably <span className="font-semibold text-primary">SuperK53</span>, a DoT-certified K53 learner's license platform. 
+          I've also built developer tooling, npm packages, and interactive web experiences.
         </p>
         <p>
           I'm deeply technical. I live inside codebases, APIs, and debugging sessions. I fix things other people are scared to touch. 
-          I hold CompTIA A+ and Network+ certifications, and I've been doing IT support since 2010. But the real goal? 
+          I hold CompTIA A+ and Network+ certifications and have been in IT since 2010. The real goal? 
           Building systems that run themselves. Products that work while I sleep. That's the exit plan.
         </p>
         <p>
-          I hate normal. I hate predictable. I pick the weird path on purpose because I need to feel different. 
-          I work best in chaos. Deadlines, late-night sparks, sudden pivots, 10 tabs open in my brain. That's where I thrive.
+          I hate normal. I hate predictable. I pick the weird path on purpose. 
+          I work best in chaos — deadlines, late-night sparks, sudden pivots, 10 tabs open in my brain. That's where I thrive.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-base font-medium text-muted-foreground">
           <MapPin className="h-5 w-5 text-primary" aria-hidden />
@@ -1063,8 +879,8 @@ function ExperienceSection() {
     <SectionWrapper id="experience" className="bg-background">
       <SectionHeading
         eyebrow="Other Work"
-        title="Side Projects & Experience"
-        description="Additional ventures and IT services I maintain alongside NeuroLint development."
+        title="Projects & Experience"
+        description="Ventures and roles I've built or contributed to over the years."
       />
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
         {portfolioItems.map((item) => (
@@ -1097,45 +913,13 @@ function ServicesSection() {
     <SectionWrapper className="bg-background">
       <SectionHeading
         eyebrow="Solutions"
-        title="Digital Solutions & Services"
-        description="From enterprise-ready digital platforms to reliable IT support for homes and businesses across South Africa."
+        title="Digital Platforms"
+        description="Practical digital products built for South African users."
       />
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
         {platformSolutions.map((platform) => (
           <PlatformCard key={platform.title} platform={platform} />
         ))}
-      </div>
-      <div className="mt-16 space-y-6">
-        <div className="flex flex-col gap-4 rounded-2xl bg-primary/5 p-8 text-center text-primary">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em]">
-            BurbGigz IT Services
-          </p>
-          <h3 className="font-display text-3xl font-semibold text-foreground">
-            Professional remote-first IT support with on-site services when
-            needed
-          </h3>
-          <p className="text-base text-muted-foreground">
-            Remote sessions start immediately • Professional helpdesk experience
-            • 30-day warranty on all repairs
-          </p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {servicePackages.map((service) => (
-            <ServiceCard key={service.title} service={service} />
-          ))}
-        </div>
-        <div className="flex justify-center">
-          <a
-            href="https://burbgigz.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Visit BurbGigz IT Services"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-transform duration-200 hover:-translate-y-0.5 hover:bg-primary/90"
-          >
-            <ExternalLink className="h-4 w-4" aria-hidden />
-            Visit BurbGigz
-          </a>
-        </div>
       </div>
     </SectionWrapper>
   );
@@ -1147,7 +931,7 @@ function TestimonialsSection() {
       <SectionHeading
         eyebrow="Testimonials"
         title="What Clients Say"
-        description="Real feedback from South Africans who trust SuperK53, Taxfy, and BurbGigz."
+        description="Real feedback from South Africans who've used SuperK53."
       />
       <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((testimonial) => (
