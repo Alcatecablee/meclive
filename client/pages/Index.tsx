@@ -98,7 +98,7 @@ const stats: StatCard[] = [
   {
     value: "100%",
     label: "Self-Taught",
-    description: "No bootcamp, no CS degree — built everything from scratch",
+    description: "No bootcamp, no CS degree. Built everything from scratch.",
     icon: Code2,
   },
   {
@@ -153,7 +153,7 @@ const portfolioItems: PortfolioItem[] = [
     role: "Founder & Developer",
     timeframe: "2025 - Present",
     description:
-      "Browser-based PC health checker with 73 step-by-step fix guides across 15 categories. Privacy-first — all checks run locally, nothing sent to a server.",
+      "Browser-based PC health checker with 73 step-by-step fix guides across 15 categories. Privacy-first, all checks run locally, nothing sent to a server.",
     highlights: [
       "73 Fix Guides",
       "No Account",
@@ -172,7 +172,7 @@ const portfolioItems: PortfolioItem[] = [
     role: "Founder & Developer",
     timeframe: "2025 - Present",
     description:
-      "Browser-based video editor powered by FFmpeg WASM. Trim, caption, denoise, blur faces, and transcribe — all processed locally with no uploads.",
+      "Browser-based video editor powered by FFmpeg WASM. Trim, caption, denoise, blur faces, and transcribe. All processed locally with no uploads.",
     highlights: [
       "FFmpeg WASM",
       "Whisper AI Captions",
@@ -252,7 +252,7 @@ const platformSolutions: PlatformSolution[] = [
     description:
       "Instant P2P file, clipboard & message transfer with no accounts.",
     details:
-      "Pairs two devices via QR code or 6-digit PIN over a WebRTC data channel. Files, text, and clipboard stay entirely between the two browsers — no server ever sees your data.",
+      "Pairs two devices via QR code or 6-digit PIN over a WebRTC data channel. Files, text, and clipboard stay entirely between the two browsers. No server ever sees your data.",
     bullets: [
       "WebRTC P2P Transfer",
       "QR + PIN Pairing",
@@ -270,7 +270,7 @@ const platformSolutions: PlatformSolution[] = [
     description:
       "Browser-based PC health checker and step-by-step fix guide library.",
     details:
-      "Runs a real device health scan using browser APIs, generates an animated score, and recommends from 73 guides across 15 categories. Everything runs locally — no uploads, no tracking.",
+      "Runs a real device health scan using browser APIs, generates an animated score, and recommends from 73 guides across 15 categories. Everything runs locally. No uploads, no tracking.",
     bullets: [
       "73 Fix Guides",
       "Live Health Score",
@@ -286,9 +286,9 @@ const platformSolutions: PlatformSolution[] = [
     title: "CalmClip",
     badge: "Live",
     description:
-      "Browser-based video editor — trim, caption, and enhance locally.",
+      "Browser-based video editor: trim, caption, and enhance locally.",
     details:
-      "FFmpeg WASM handles all processing in-browser. AI features include Whisper transcription, filler-word removal, word-by-word captions, and face blur — no file ever leaves your device.",
+      "FFmpeg WASM handles all processing in-browser. AI features include Whisper transcription, filler-word removal, word-by-word captions, and face blur. No file ever leaves your device.",
     bullets: [
       "FFmpeg WASM",
       "Whisper Captions",
@@ -360,7 +360,7 @@ const faqItems: FAQItem[] = [
   {
     question: "What kind of digital work do you take on?",
     answer:
-      "I build web platforms and digital products — primarily for South African markets. My focus is on practical, useful tools that solve real problems. If you have an idea and need someone to bring it to life technically, feel free to reach out.",
+      "I build web platforms and digital products, primarily for South African markets. My focus is on practical, useful tools that solve real problems. If you have an idea and need someone to bring it to life technically, feel free to reach out.",
   },
   {
     question: "What certifications do you hold?",
@@ -750,7 +750,7 @@ function HeroSection() {
             South African Developer &amp; Entrepreneur
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Building privacy-first tools people actually use —
+            Building privacy-first tools people actually use:
             <span className="font-semibold text-primary"> QuickBridge</span>, <span className="font-semibold text-primary">CalmPC</span>, <span className="font-semibold text-primary">CalmClip</span>, and more.
           </p>
         </div>
@@ -820,7 +820,7 @@ function AboutSection() {
         </p>
         <p>
           I hate normal. I hate predictable. I pick the weird path on purpose. 
-          I work best in chaos — deadlines, late-night sparks, sudden pivots, 10 tabs open in my brain. That's where I thrive.
+          I work best in chaos: deadlines, late-night sparks, sudden pivots, 10 tabs open in my brain. That's where I thrive.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-base font-medium text-muted-foreground">
           <MapPin className="h-5 w-5 text-primary" aria-hidden />
