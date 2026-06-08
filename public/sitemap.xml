@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://justc.live/</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -12,78 +12,47 @@
       <image:caption>Clive Makazhu, creator of NeuroLint CLI - the tool that auto-fixes 700+ React/Next.js issues</image:caption>
     </image:image>
   </url>
-  
-  <url>
-    <loc>https://justc.live/#neurolint</loc>
-    <lastmod>2025-12-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  
+
   <url>
     <loc>https://justc.live/blog</loc>
-    <lastmod>2025-10-10</lastmod>
+    <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <url>
     <loc>https://justc.live/blog/pass-k53-learners-license-south-africa</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://justc.live/attached_assets/stock_images/person_studying_lear_fc6b74a3.jpg</image:loc>
-      <image:title>How to Pass Your K53 Learner's License Test in South Africa</image:title>
+      <image:loc>https://justc.live/attached_assets/stock_images/student_studying_wit_04bb9099.jpg</image:loc>
+      <image:title>What the K53 Test Is Actually Like (And Why People Fail It)</image:title>
       <image:caption>Comprehensive guide to passing the K53 learner's license test in South Africa</image:caption>
     </image:image>
   </url>
-  
+
   <url>
-    <loc>https://justc.live/blog/maximize-sars-tax-refund-2025</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://justc.live/attached_assets/stock_images/south_african_tax_do_21cd6f30.jpg</image:loc>
-      <image:title>Maximizing Your SARS Tax Refund in 2025</image:title>
-      <image:caption>Expert tips for maximizing your SARS tax refund in South Africa</image:caption>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://justc.live/blog/future-remote-it-support-south-africa</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://justc.live/attached_assets/stock_images/it_professional_remo_ea5f7d7b.jpg</image:loc>
-      <image:title>The Future of Remote IT Support in South Africa</image:title>
-      <image:caption>Professional helpdesk services and remote IT support for South African businesses</image:caption>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://justc.live/blog/starting-tech-business-south-africa-2025</loc>
-    <lastmod>2025-10-07</lastmod>
+    <loc>https://justc.live/blog/transfer-files-without-uploading-quickbridge</loc>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://justc.live/attached_assets/stock_images/entrepreneur_startup_9e073f87.jpg</image:loc>
-      <image:title>Starting a Tech Business in South Africa: A Complete Guide for Aspiring Entrepreneurs in 2025</image:title>
-      <image:caption>Complete guide to launching a successful tech startup in South Africa with funding, registration, and scaling strategies</image:caption>
+      <image:title>Getting a File From Your Laptop to Your Phone Should Not Be This Hard</image:title>
+      <image:caption>QuickBridge - peer-to-peer file transfer via WebRTC with no uploads or accounts required</image:caption>
     </image:image>
   </url>
-  
+
   <url>
-    <loc>https://justc.live/blog/digital-transformation-south-african-smes-2025</loc>
-    <lastmod>2025-10-06</lastmod>
+    <loc>https://justc.live/blog/edit-video-in-browser-calmclip</loc>
+    <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://justc.live/attached_assets/stock_images/digital_transformati_093c8edd.jpg</image:loc>
-      <image:title>Digital Transformation for South African SMEs: Why Your Business Needs to Go Digital in 2025</image:title>
-      <image:caption>Comprehensive guide to digital transformation for South African small businesses with implementation strategies and ROI</image:caption>
+      <image:loc>https://justc.live/attached_assets/stock_images/home_office_desk_com_85359384.jpg</image:loc>
+      <image:title>FFmpeg Runs in the Browser Now, and I Built a Video Editor on Top of It</image:title>
+      <image:caption>CalmClip - browser-based video editor powered by FFmpeg WASM, no uploads required</image:caption>
     </image:image>
   </url>
 </urlset>

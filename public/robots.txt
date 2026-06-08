@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://clivemakazhu.com/sitemap.xml
+Sitemap: https://justc.live/sitemap.xml

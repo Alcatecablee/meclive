@@ -297,6 +297,7 @@ export default function BlogPost() {
             "description": post.excerpt,
             "image": `https://justc.live${post.image}`,
             "datePublished": post.date,
+            "dateModified": post.date,
             "author": {
               "@type": "Person",
               "name": "Clive Makazhu",

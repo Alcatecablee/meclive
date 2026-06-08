@@ -64,6 +64,8 @@ export default function Blog() {
         <meta property="og:description" content="Expert perspectives on technology, entrepreneurship, and digital innovation in South Africa" />
         <meta property="og:url" content="https://justc.live/blog" />
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_ZA" />
+        <meta property="og:site_name" content="Clive Makazhu - Developer & Builder" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog & Insights - Just Clive" />
         <meta name="twitter:description" content="Expert perspectives on technology, entrepreneurship, and digital innovation in South Africa" />
