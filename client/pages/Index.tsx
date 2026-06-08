@@ -593,7 +593,7 @@ function AboutSection() {
         <p>
           I'm a self-taught developer and one-man startup studio based in Johannesburg. I generate ideas fast, execute faster, and pivot when needed. 
           Most people love dreaming. I love building. Every project I touch starts the same way: 
-          "This thing is slow, ugly, or stupid. I can build it better." And 9 times out of 10, I actually do.
+          "This thing is slow, ugly, or stupid. I can build it better." And I actually do.
         </p>
         <p>
           I work as a helpdesk tech by day while shipping products on the side. Right now I'm building a suite of privacy-first browser tools: 
@@ -608,8 +608,7 @@ function AboutSection() {
           Building systems that run themselves. Products that work while I sleep. That's the exit plan.
         </p>
         <p>
-          I hate normal. I hate predictable. I pick the weird path on purpose. 
-          I work best in chaos: deadlines, late-night sparks, sudden pivots, 10 tabs open in my brain. That's where I thrive.
+          I pick the weird path on purpose. Late nights, sudden pivots, hard problems nobody wants to touch — that's the work I actually enjoy. If you need something built that works and keeps working, reach out.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-base font-medium text-muted-foreground">
           <MapPin className="h-5 w-5 text-primary" aria-hidden />
