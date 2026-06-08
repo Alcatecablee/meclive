@@ -133,7 +133,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                 Just Clive
               </p>
               <p className="text-xs text-muted-foreground">
-                Entrepreneur &amp; Technology Leader
+                Developer &amp; Builder
               </p>
             </div>
           </Link>
