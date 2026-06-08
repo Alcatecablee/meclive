@@ -413,6 +413,15 @@ export default function BlogPost() {
                       </Link>
                     ))}
                   </div>
+                  <div className="mt-10 text-center">
+                    <Link
+                      to="/blog"
+                      className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-all hover:border-primary hover:text-primary"
+                    >
+                      <ArrowLeft className="h-4 w-4" />
+                      View all posts
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>

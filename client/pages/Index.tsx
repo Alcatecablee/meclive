@@ -540,7 +540,7 @@ function HeroSection() {
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Building privacy-first tools people actually use:
-            <span className="font-semibold text-primary"> QuickBridge</span>, <span className="font-semibold text-primary">CalmPC</span>, <span className="font-semibold text-primary">CalmClip</span>, and more.
+            <span className="font-semibold text-primary"> QuickBridge</span>, <span className="font-semibold text-primary">CalmPC</span>, <span className="font-semibold text-primary">CalmClip</span>, <span className="font-semibold text-primary">SuperK53</span>, and more.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -651,14 +651,25 @@ function ExperienceSection() {
   return (
     <SectionWrapper id="experience" className="bg-background">
       <SectionHeading
-        eyebrow="Other Work"
-        title="Projects & Experience"
-        description="Ventures and roles I've built or contributed to over the years."
+        eyebrow="Projects"
+        title="What I've Built"
+        description="Live products I've designed, built, and shipped."
       />
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
-        {portfolioItems.map((item) => (
+        {portfolioItems.filter((item) => item.link).map((item) => (
           <PortfolioCard key={`${item.company}-${item.role}`} item={item} />
         ))}
+      </div>
+
+      <div className="mt-20">
+        <h3 className="mb-8 font-display text-xl font-semibold text-muted-foreground">
+          Work History
+        </h3>
+        <div className="grid gap-8 lg:grid-cols-2">
+          {portfolioItems.filter((item) => !item.link).map((item) => (
+            <PortfolioCard key={`${item.company}-${item.role}`} item={item} />
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   );
