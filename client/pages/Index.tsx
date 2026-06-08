@@ -93,9 +93,9 @@ const stats: StatCard[] = [
     icon: Sparkles,
   },
   {
-    value: "2",
+    value: "4",
     label: "Active Platforms",
-    description: "Live South African digital products built and shipped",
+    description: "Live products built and shipped across web and developer tools",
     icon: Building2,
   },
   {
@@ -131,6 +131,63 @@ const portfolioItems: PortfolioItem[] = [
     },
     badge: "Side Project",
     location: "Johannesburg, South Africa",
+  },
+  {
+    company: "QuickBridge",
+    role: "Founder & Developer",
+    timeframe: "2025 - Present",
+    description:
+      "Peer-to-peer file, clipboard, and message transfer via WebRTC and QR-code pairing. No accounts, no installs, nothing stored on a server.",
+    highlights: [
+      "WebRTC P2P",
+      "QR Pairing",
+      "PIN Fallback",
+      "PWA Installable",
+    ],
+    link: {
+      href: "https://quickbridge.app",
+      label: "quickbridge.app",
+    },
+    badge: "Live",
+    location: "Remote / Global",
+  },
+  {
+    company: "CalmPC",
+    role: "Founder & Developer",
+    timeframe: "2025 - Present",
+    description:
+      "Browser-based PC health checker with 73 step-by-step fix guides across 15 categories. Privacy-first — all checks run locally, nothing sent to a server.",
+    highlights: [
+      "73 Fix Guides",
+      "No Account",
+      "Health Score",
+      "Shareable Report",
+    ],
+    link: {
+      href: "https://calmpc.com",
+      label: "calmpc.com",
+    },
+    badge: "Live",
+    location: "Remote / Global",
+  },
+  {
+    company: "CalmClip",
+    role: "Founder & Developer",
+    timeframe: "2025 - Present",
+    description:
+      "Browser-based video editor powered by FFmpeg WASM. Trim, caption, denoise, blur faces, and transcribe — all processed locally with no uploads.",
+    highlights: [
+      "FFmpeg WASM",
+      "Whisper AI Captions",
+      "Face Blur",
+      "No Upload",
+    ],
+    link: {
+      href: "https://calmclip.video",
+      label: "calmclip.video",
+    },
+    badge: "Live",
+    location: "Remote / Global",
   },
   {
     company: "GAAP Point-of-Sale",
@@ -192,6 +249,60 @@ const skillCategories: SkillCategory[] = [
 ];
 
 const platformSolutions: PlatformSolution[] = [
+  {
+    title: "QuickBridge",
+    badge: "Live",
+    description:
+      "Instant P2P file, clipboard & message transfer with no accounts.",
+    details:
+      "Pairs two devices via QR code or 6-digit PIN over a WebRTC data channel. Files, text, and clipboard stay entirely between the two browsers — no server ever sees your data.",
+    bullets: [
+      "WebRTC P2P Transfer",
+      "QR + PIN Pairing",
+      "Auto-clipboard Sync",
+      "PWA Installable",
+    ],
+    link: {
+      href: "https://quickbridge.app",
+      label: "Visit QuickBridge",
+    },
+  },
+  {
+    title: "CalmPC",
+    badge: "Live",
+    description:
+      "Browser-based PC health checker and step-by-step fix guide library.",
+    details:
+      "Runs a real device health scan using browser APIs, generates an animated score, and recommends from 73 guides across 15 categories. Everything runs locally — no uploads, no tracking.",
+    bullets: [
+      "73 Fix Guides",
+      "Live Health Score",
+      "Shareable Report",
+      "No Account Needed",
+    ],
+    link: {
+      href: "https://calmpc.com",
+      label: "Visit CalmPC",
+    },
+  },
+  {
+    title: "CalmClip",
+    badge: "Live",
+    description:
+      "Browser-based video editor — trim, caption, and enhance locally.",
+    details:
+      "FFmpeg WASM handles all processing in-browser. AI features include Whisper transcription, filler-word removal, word-by-word captions, and face blur — no file ever leaves your device.",
+    bullets: [
+      "FFmpeg WASM",
+      "Whisper Captions",
+      "Face Blur",
+      "Silence Cutter",
+    ],
+    link: {
+      href: "https://calmclip.video",
+      label: "Visit CalmClip",
+    },
+  },
   {
     title: "SuperK53",
     badge: "Side Project",
@@ -643,8 +754,8 @@ function HeroSection() {
             South African Developer &amp; Entrepreneur
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Self-taught builder focused on practical digital products for South Africa.
-            Founder of <span className="font-semibold text-primary">SuperK53</span> and other digital ventures.
+            Building privacy-first tools people actually use —
+            <span className="font-semibold text-primary"> QuickBridge</span>, <span className="font-semibold text-primary">CalmPC</span>, <span className="font-semibold text-primary">CalmClip</span>, and more.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -824,9 +935,11 @@ function AboutSection() {
           "This thing is slow, ugly, or stupid. I can build it better." And 9 times out of 10, I actually do.
         </p>
         <p>
-          I work as a helpdesk tech by day while building digital products on the side. I've shipped multiple South African digital ventures — 
-          most notably <span className="font-semibold text-primary">SuperK53</span>, a DoT-certified K53 learner's license platform. 
-          I've also built developer tooling, npm packages, and interactive web experiences.
+          I work as a helpdesk tech by day while shipping products on the side. Right now I'm building a suite of privacy-first browser tools: 
+          <span className="font-semibold text-primary"> QuickBridge</span> (P2P file transfer via WebRTC), 
+          <span className="font-semibold text-primary"> CalmPC</span> (browser-based PC health checker), and 
+          <span className="font-semibold text-primary"> CalmClip</span> (local video editor powered by FFmpeg WASM). 
+          I've also built <span className="font-semibold text-primary">SuperK53</span>, a DoT-certified K53 platform for South Africa, plus developer tooling and npm packages.
         </p>
         <p>
           I'm deeply technical. I live inside codebases, APIs, and debugging sessions. I fix things other people are scared to touch. 

@@ -1,0 +1,163 @@
+# CalmPC
+
+A beginner-friendly, privacy-first tool that runs a browser-based health check and walks users through fixing their own computer problems step by step.
+
+**Live site:** https://www.calmpc.com (replace with deployed domain before publishing)
+
+---
+
+## What it does
+
+1. **Health Check** - scans device specs, browser state, internet connection, and permissions using real browser APIs. Produces an animated score and auto-suggests relevant fix guides.
+2. **Fix an Issue** - 73 step-by-step guides across 15 categories covering Windows, Mac, and Linux problems.
+3. **Share Report** - encodes all results as base64 JSON in the URL hash and opens a standalone `report.html` page. Nothing is sent to a server.
+
+Everything runs in the browser. No accounts, no uploads, no tracking.
+
+---
+
+## Stack
+
+- Vanilla JavaScript (ES6 modules, no bundler)
+- CSS custom properties (no framework)
+- Node.js 20 + `serve` for static file serving
+
+---
+
+## Run locally
+
+```bash
+cd Rim
+npm install
+npm start
+```
+
+Serves on port 5000. Open http://localhost:5000.
+
+**Do not add the `-s` flag to `serve`.** SPA mode redirects `report.html`, `robots.txt`, and `sitemap.xml` to `index.html`, breaking them. The start script must stay as `serve . -p 5000`.
+
+---
+
+## File map
+
+```
+Rim/
+  index.html              SPA shell + all SEO (head meta, JSON-LD schemas, seo-content section)
+  styles.css              All styles via CSS custom properties
+  report.html             Standalone shareable health report (decodes URL hash, no JS imports)
+  robots.txt              Search engine crawl rules (must serve as plain text)
+  sitemap.xml             Single-URL sitemap (must serve as valid XML)
+  404.html                Branded 404 page
+  manifest.json           PWA manifest
+  js/
+    main.js               Orchestrator: health check flow, wizard, search, URL params, history
+    diagnostics.js        Core check logic (device, network, permissions, storage)
+    guides.js             69 guides + GUIDE_CATEGORIES + GUIDE_LIST + GUIDE_TAGS + AMAZON_TAG
+    report.js             Health score calc, summary text, share data encoding
+    ui.js                 All DOM writes (SVG, step states, verdict, result groups)
+    lib/
+      qrcode.min.js       QRCode.js (19 KB) for QR code generation
+  assets/
+    logo.png              Site logo
+    logo-nobg.png         Logo with transparent background
+    guides/               Step screenshots (WebP) and GIFs, organised by guide ID
+```
+
+---
+
+## Architecture notes
+
+- No backend. All checks are client-side.
+- `type="module"` on the main script tag. No bundler needed.
+- Health check uses: `navigator`, WebRTC, Fetch, Battery API, Permissions API, `navigator.deviceMemory` (unavailable in Firefox, shown as "Unavailable").
+- Network speed test hits Cloudflare endpoints. CORS errors are expected and handled. Do not silence the result.
+- SVG elements require `setAttribute('class', ...)` not `.className =` (read-only in SVG).
+- localStorage keys: `pc-helper-history` (scan history, opened guides, fix count), `pc-helper-recent` (last 3 guides opened).
+- Share report encodes with `btoa(JSON.stringify(data))`. The `x` character (multiplication sign U+00D7) must be replaced with plain `x` before encoding or `btoa` throws on some browsers.
+- Fix links in `report.html` point to `/?guide=[id]`. `main.js` reads `?guide=` on init and auto-opens the correct wizard.
+
+---
+
+## Adding a guide
+
+All six places must be updated together. Missing one produces a silent gap.
+
+1. `GUIDES` object in `guides.js` - full guide definition (id, title, icon, severity, shopCost, redditQuery, steps array)
+2. `GUIDE_LIST` array in `guides.js` - flat list used for search
+3. `GUIDE_CATEGORIES` array in `guides.js` - controls which category section it appears under
+4. `GUIDE_TAGS` object in `guides.js` - keyword list for the symptom search box
+5. `FAQPage` JSON-LD in `index.html` - the Q&A pair for this guide
+6. `.seo-content` section in `index.html` - the guide listed under the correct category heading
+
+---
+
+## Guide voice
+
+Write like a knowledgeable friend, not a corporate manual.
+
+- Speak directly: "you", not "the user".
+- Name the actual thing: "Task Manager", not "the system utility".
+- Explain briefly why a step works, not just what to click.
+- Include the real edge cases people hit on Reddit, not the textbook fix.
+- No em dashes or en dashes anywhere in copy. Use parentheses, commas, colons, or periods instead.
+
+Banned phrases: "Furthermore", "Additionally", "Moreover", "It is worth noting that", "Please ensure that", "It is important to", "In order to", "This will help you to", "At this point in time", passive voice chains.
+
+---
+
+## SEO
+
+This is a static SPA with no server-side rendering. Googlebot only sees the raw HTML in `index.html`. JavaScript-rendered content is invisible to search engines.
+
+All SEO lives in two places:
+1. The `<head>` of `index.html` - title, meta description, canonical, OG tags, Twitter Card, three JSON-LD schema blocks (WebApplication, FAQPage, HowTo).
+2. The `.seo-content` section at the bottom of `index.html` - real, visible, semantic HTML listing all 69 guides.
+
+Never hide `.seo-content` with `display:none` or `visibility:hidden`. Never remove or shorten the FAQPage JSON-LD. The OG tags have no `og:image` by design (no hosted image). Do not add a placeholder or broken URL.
+
+---
+
+## Monetisation
+
+- Amazon affiliate tag: `quickbridge-20` (set as `AMAZON_TAG` constant in `guides.js`).
+- 14 product URLs use `https://www.amazon.co.uk/dp/[ASIN]?tag=quickbridge-20` format.
+- Verify the Associates account is active before publishing.
+- Each guide has `severity: 'safe' | 'careful' | 'pro'` and `shopCost: 'PS##-PS##'` (PS renders as the pound sign in JS).
+
+---
+
+## Before publishing
+
+Replace every placeholder in this list:
+
+- `https://www.calmpc.com` in `index.html` (head + schema JSON-LD), `robots.txt`, and `sitemap.xml`
+- Confirm `robots.txt` serves as `text/plain` (curl to verify)
+- Confirm `sitemap.xml` serves as `application/xml` (curl to verify)
+- Confirm `report.html` loads directly without redirecting to `index.html`
+- Confirm the Amazon Associates account linked to `quickbridge-20` is active
+- Confirm HTTPS is enabled on the deployed domain
+
+The pre-publish checklist bar at the bottom of the page (visible in dev, hidden on the live domain) lists these inline.
+
+---
+
+## Design system
+
+Warm light theme. The positioning is "the calm, knowledgeable friend helping you fix your computer." Emotional reassurance first, technology second.
+
+| Token | Value |
+|---|---|
+| Background | `#faf9f6` (warm cream) |
+| Surface | `#ffffff` |
+| Surface raised | `#f3f0ec` |
+| Border (all cards) | `#000000` (black) |
+| Border subtle | `#d8d2c8` (internal dividers only) |
+| Text | `#1c1917` |
+| Text secondary | `#6b6258` |
+| Accent | `#b06030` (terracotta) |
+| CTA button | `#9a5028` |
+| Success | `#2a7a52` |
+| Warning | `#a07018` |
+| Danger | `#b03030` |
+
+Font: DM Sans. No purple, blue, or indigo. No glassmorphism. No gradient glows. No emoji in UI or SEO sections.
