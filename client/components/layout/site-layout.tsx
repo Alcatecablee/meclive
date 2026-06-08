@@ -218,7 +218,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
               <a
                 href="https://x.com/just_clive_sa"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer me"
                 title="Follow Clive on X"
                 className="inline-flex items-center gap-2 transition hover:text-primary"
                 aria-label="Follow Clive on X"

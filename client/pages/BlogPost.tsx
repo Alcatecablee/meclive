@@ -300,15 +300,19 @@ export default function BlogPost() {
             "author": {
               "@type": "Person",
               "name": "Clive Makazhu",
-              "url": "https://justc.live"
+              "url": "https://justc.live",
+              "sameAs": [
+                "https://x.com/just_clive_sa",
+                "https://quickbridge.app",
+                "https://calmpc.com",
+                "https://calmclip.video",
+                "https://superk53.co.za"
+              ]
             },
             "publisher": {
-              "@type": "Organization",
-              "name": "Just Clive",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://justc.live/favicon-192x192.png"
-              }
+              "@type": "Person",
+              "name": "Clive Makazhu",
+              "url": "https://justc.live"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
