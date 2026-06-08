@@ -10,20 +10,17 @@ import {
   Clock,
   Code2,
   ExternalLink,
-  Github,
   Layers,
   LineChart,
   Loader2,
   MapPin,
   MessageCircle,
   Monitor,
-  Package,
   ShieldCheck,
   Sparkles,
   Terminal,
   Twitter,
   Users,
-  Zap,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -707,7 +704,6 @@ export default function Index() {
   return (
     <div className="flex flex-col">
       <HeroSection />
-      <NeuroLintSection />
       <AboutSection />
       <ExperienceSection />
       <SkillsSection />
@@ -790,130 +786,6 @@ function HeroSection() {
         </div>
       </div>
     </section>
-  );
-}
-
-function NeuroLintSection() {
-  const features = [
-    {
-      icon: Zap,
-      title: "700+ Auto-Fixes",
-      description: "Automatically fixes ESLint errors, hydration bugs, missing keys, and accessibility issues",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Deterministic & Safe",
-      description: "Rule-based AST parsing, not AI. Same input = same output. 5-step validation with auto-revert",
-    },
-    {
-      icon: Code2,
-      title: "React 19 Ready",
-      description: "Handles forwardRef removal, string refs migration, ReactDOM.render to createRoot, and more",
-    },
-    {
-      icon: Terminal,
-      title: "Simple CLI",
-      description: "Just run 'neurolint fix .' and watch your codebase get cleaned up automatically",
-    },
-  ];
-
-  return (
-    <SectionWrapper id="neurolint" className="bg-gradient-to-b from-primary/5 to-background">
-      <div className="mb-8 flex justify-center">
-        <span className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-lg">
-          <Sparkles className="h-4 w-4" />
-          Flagship Project
-        </span>
-      </div>
-      <SectionHeading
-        title="NeuroLint CLI"
-        description="The only tool that actually fixes your React/Next.js code. No AI, no rewrites. Just deterministic AST transformations that work."
-      />
-      
-      <div className="mx-auto mt-12 max-w-4xl">
-        <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-black shadow-2xl">
-          <iframe
-            src="https://www.youtube.com/embed/czWtqrwcpDE"
-            title="NeuroLint Demo Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="h-full w-full"
-          />
-        </div>
-      </div>
-
-      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {features.map((feature) => {
-          const Icon = feature.icon;
-          return (
-            <div
-              key={feature.title}
-              className="flex flex-col gap-4 rounded-2xl border border-border bg-card/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Icon className="h-6 w-6" />
-              </div>
-              <h3 className="font-display text-lg font-semibold text-foreground">
-                {feature.title}
-              </h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-border bg-zinc-900 p-6 shadow-xl">
-        <div className="flex items-center gap-2 text-xs text-zinc-500">
-          <span className="h-3 w-3 rounded-full bg-red-500" />
-          <span className="h-3 w-3 rounded-full bg-yellow-500" />
-          <span className="h-3 w-3 rounded-full bg-green-500" />
-          <span className="ml-2">Terminal</span>
-        </div>
-        <pre className="mt-4 overflow-x-auto text-sm text-zinc-100">
-          <code>{`# Install globally
-npm install -g @neurolint/cli
-
-# Analyze your project
-neurolint analyze . --verbose
-
-# Preview fixes (dry-run)
-neurolint fix . --all-layers --dry-run
-
-# Apply fixes with backup
-neurolint fix . --all-layers --backup`}</code>
-        </pre>
-      </div>
-
-      <div className="mt-12 flex flex-wrap justify-center gap-4">
-        <a
-          href="https://neurolint.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-primary/90 hover:shadow-xl"
-        >
-          <ExternalLink className="h-4 w-4" />
-          Visit neurolint.dev
-        </a>
-        <a
-          href="https://github.com/Alcatecablee/Neurolint-CLI"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border-2 border-input bg-background px-8 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg"
-        >
-          <Github className="h-4 w-4" />
-          View on GitHub
-        </a>
-        <a
-          href="https://www.npmjs.com/package/@neurolint/cli"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border-2 border-input bg-background px-8 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg"
-        >
-          <Package className="h-4 w-4" />
-          npm Package
-        </a>
-      </div>
-    </SectionWrapper>
   );
 }
 
